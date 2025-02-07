@@ -24,7 +24,7 @@ jobs:
 
       # Set the default GCP project for subsequent gcloud commands in your environment.
       - name: Configure GCP Project
-        run: gcloud config set project ${{ secrets.GCP_PROJECT_ID }}
+        run: gcloud config set project ${{ vars.GCP_PROJECT_ID }}
 
       # Configure Docker authentication for interacting with Artifact Registry, allowing you to push or pull Docker images securely.
       # Build the docker image and push top artifact registry.
